@@ -1,0 +1,44 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --all-features
+Features: test-name=rust-memchr:@
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features compiler_builtins
+Features: test-name=librust-memchr-dev:compiler_builtins
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features core
+Features: test-name=librust-memchr-dev:core
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets 
+Features: test-name=librust-memchr-dev:default
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features libc
+Features: test-name=librust-memchr-dev:libc
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features rustc-dep-of-std
+Features: test-name=librust-memchr-dev:rustc-dep-of-std
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features std
+Features: test-name=librust-memchr-dev:std
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features --features use_std
+Features: test-name=librust-memchr-dev:use_std
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test memchr 2.5.0 --all-targets --no-default-features
+Features: test-name=librust-memchr-dev:
+Depends: dh-cargo (>= 18), librust-quickcheck-1-dev (>= 1.0.3-~~), @
+Restrictions: allow-stderr, skip-not-installable

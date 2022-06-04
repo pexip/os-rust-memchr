@@ -1,0 +1,60 @@
+Source: rust-memchr
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Sylvestre Ledru <sylvestre@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/memchr]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/memchr
+Homepage: https://github.com/BurntSushi/memchr
+Rules-Requires-Root: no
+
+Package: librust-memchr-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-compiler-builtins-0.1+default-dev (>= 0.1.2-~~),
+ librust-libc-0.2-dev (>= 0.2.18-~~),
+ librust-rustc-std-workspace-core-1+default-dev
+Provides:
+ librust-memchr+compiler-builtins-dev (= ${binary:Version}),
+ librust-memchr+core-dev (= ${binary:Version}),
+ librust-memchr+default-dev (= ${binary:Version}),
+ librust-memchr+libc-dev (= ${binary:Version}),
+ librust-memchr+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-memchr+std-dev (= ${binary:Version}),
+ librust-memchr+use-std-dev (= ${binary:Version}),
+ librust-memchr-2-dev (= ${binary:Version}),
+ librust-memchr-2+compiler-builtins-dev (= ${binary:Version}),
+ librust-memchr-2+core-dev (= ${binary:Version}),
+ librust-memchr-2+default-dev (= ${binary:Version}),
+ librust-memchr-2+libc-dev (= ${binary:Version}),
+ librust-memchr-2+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-memchr-2+std-dev (= ${binary:Version}),
+ librust-memchr-2+use-std-dev (= ${binary:Version}),
+ librust-memchr-2.5-dev (= ${binary:Version}),
+ librust-memchr-2.5+compiler-builtins-dev (= ${binary:Version}),
+ librust-memchr-2.5+core-dev (= ${binary:Version}),
+ librust-memchr-2.5+default-dev (= ${binary:Version}),
+ librust-memchr-2.5+libc-dev (= ${binary:Version}),
+ librust-memchr-2.5+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-memchr-2.5+std-dev (= ${binary:Version}),
+ librust-memchr-2.5+use-std-dev (= ${binary:Version}),
+ librust-memchr-2.5.0-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+compiler-builtins-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+core-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+default-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+libc-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+std-dev (= ${binary:Version}),
+ librust-memchr-2.5.0+use-std-dev (= ${binary:Version})
+Description: Safe interface to memchr - Rust source code
+ This package contains the source for the Rust memchr crate, packaged by
+ debcargo for use with cargo and dh-cargo.
